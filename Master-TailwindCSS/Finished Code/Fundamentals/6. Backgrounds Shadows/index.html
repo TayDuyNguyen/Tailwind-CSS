@@ -1,56 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Backgrounds & Shadows</title>
-  </head>
-  <body>
-    <!-- Background Images -->
-    <!-- https://tailwindcss.com/docs/background-image -->
-    <div
-      class="h-screen w-full bg-blue-500 bg-cover bg-no-repeat bg-center"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
-      "
-    ></div>
 
-    <!-- Shadows -->
-    <!-- https://tailwindcss.com/docs/drop-shadow -->
-    <!-- I know we didn't cover flexbox, but it's just for demo purposes -->
-    <div class="flex flex-wrap">
-      <div class="w-[400px] mt-10 ml-4 p-3 shadow-md">Shadow Medium</div>
-      <div class="w-[400px] mt-10 ml-7 p-3 shadow-lg">Shadow Large</div>
-      <div class="w-[400px] mt-10 ml-7 p-3 shadow-xl">Shadow Extra Large</div>
-      <div class="w-[400px] mt-10 ml-7 p-3 shadow-2xl">
-        Shadow 2x Extra Large
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Backgrounds & Shadows - Complete Tutorial</title>
+</head>
+
+<body class="p-20 space-y-12">
+
+  <!-- 1. Background Color - Màu nền -->
+  <!-- https://tailwindcss.com/docs/background-color -->
+  <section>
+    <h1>1. Background Color - Màu nền</h1>
+    <div class="space-y-4">
+      <div class="bg-blue-500 p-4 text-white">bg-blue-500</div>
+      <!-- Opacity -->
+      <div class="bg-blue-500/10 p-4">bg-blue-500/10 (Opacity 10%)</div>
+      <div class="bg-blue-500/50 p-4">bg-blue-500/50 (Opacity 50%)</div>
+      <!-- Arbitrary Color -->
+      <div class="bg-[#123456] p-4 text-white">bg-[#123456] (Custom HEX)</div>
+    </div>
+  </section>
+
+  <!-- 2. Background Image & Utilities - Ảnh nền & Tiện ích -->
+  <!-- https://tailwindcss.com/docs/background-image -->
+  <section>
+    <h1>2. Background Image Utilities - Ảnh nền</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Background Size -->
+      <div
+        class="h-64 bg-slate-200 border-2 border-dashed border-slate-400 bg-[url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400')] bg-no-repeat bg-center bg-cover">
+        <span class="bg-black/50 text-white p-2">bg-cover (Phủ kín)</span>
       </div>
-      <div class="w-[400px] mt-10 ml-7 p-3 shadow-inner">Inner Shadow</div>
-      <!-- Shadow Colors -->
-      <div class="w-[400px] mt-10 ml-7 p-3 shadow-lg shadow-teal-300/40">
-        Colord Shadow
+      <div
+        class="h-64 bg-slate-200 border-2 border-dashed border-slate-400 bg-[url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400')] bg-no-repeat bg-center bg-contain">
+        <span class="bg-black/50 text-white p-2">bg-contain (Gói gọn)</span>
       </div>
+      <!-- Background Repeat -->
+      <div
+        class="h-64 bg-slate-200 border-2 border-dashed border-slate-400 bg-[url('https://res.cloudinary.com/dyragzjcd/image/upload/v1763817881/main-sample.png')] bg-repeat">
+        <span class="bg-black/50 text-white p-2">bg-repeat (Lặp lại)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Background Attachment - Cố định ảnh nền -->
+  <!-- https://tailwindcss.com/docs/background-attachment -->
+  <section>
+    <h1>3. Background Attachment - Trạng thái cuộn ảnh</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- bg-fixed -->
+      <div class="h-64 overflow-y-scroll bg-slate-200 border">
+        <div
+          class="h-[500px] bg-[url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600')] bg-fixed bg-center bg-cover p-4">
+          <p class="bg-white/80 p-2 font-bold mt-20">bg-fixed: Ảnh nền giữ nguyên khi cuộn</p>
+        </div>
+      </div>
+      <!-- bg-scroll -->
+      <div class="h-64 overflow-y-scroll bg-slate-200 border">
+        <div
+          class="h-[500px] bg-[url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600')] bg-scroll bg-center bg-cover p-4">
+          <p class="bg-white/80 p-2 font-bold mt-20">bg-scroll: Ảnh nền cuộn theo nội dung</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Background Clip & Origin - Cắt nền -->
+  <!-- https://tailwindcss.com/docs/background-clip -->
+  <section>
+    <h1>4. Background Clip - Cắt nền</h1>
+    <div class="space-y-8">
+      <!-- Gradient Text -->
+      <div>
+        <h3 class="font-bold mb-2">4.1. Gradient Text (bg-clip-text)</h3>
+        <h2 class="text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+          Hello Tailwind CSS
+        </h2>
+      </div>
+      <!-- Clip to content -->
+      <div class="p-8 border-8 border-dashed border-blue-500 bg-blue-200 bg-clip-content">
+        <p class="text-center font-bold">bg-clip-content: Nền chỉ xuất hiện trong phạm vi content (bỏ qua padding)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Background Blend Modes - Chế độ hòa trộn -->
+  <!-- https://tailwindcss.com/docs/background-blend-mode -->
+  <section>
+    <h1>5. Background Blend Mode - Hòa trộn nền</h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div
+        class="h-32 bg-blue-500 bg-[url('https://res.cloudinary.com/dyragzjcd/image/upload/v1763817881/main-sample.png')] bg-blend-multiply bg-center bg-cover flex items-center justify-center text-white font-bold">
+        Multiply</div>
+      <div
+        class="h-32 bg-blue-500 bg-[url('https://res.cloudinary.com/dyragzjcd/image/upload/v1763817881/main-sample.png')] bg-blend-screen bg-center bg-cover flex items-center justify-center text-white font-bold">
+        Screen</div>
+      <div
+        class="h-32 bg-blue-500 bg-[url('https://res.cloudinary.com/dyragzjcd/image/upload/v1763817881/main-sample.png')] bg-blend-overlay bg-center bg-cover flex items-center justify-center text-white font-bold">
+        Overlay</div>
+      <div
+        class="h-32 bg-blue-500 bg-[url('https://res.cloudinary.com/dyragzjcd/image/upload/v1763817881/main-sample.png')] bg-blend-darken bg-center bg-cover flex items-center justify-center text-white font-bold">
+        Darken</div>
+    </div>
+  </section>
+
+  <!-- 6. Gradients - Hiệu ứng chuyển màu -->
+  <!-- https://tailwindcss.com/docs/gradient-color-stops -->
+  <section>
+    <h1>6. Gradients - Chuyển màu</h1>
+    <div class="space-y-4">
+      <!-- Two colors -->
+      <div
+        class="h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white">
+        from-cyan-500 to-blue-500 (Ngang)</div>
+      <!-- Three colors with via -->
+      <div
+        class="h-24 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white">
+        from-indigo-500 via-purple-500 to-pink-500 (Dọc)</div>
+      <!-- Custom Directions -->
+      <div
+        class="h-24 bg-gradient-to-tr from-yellow-400 to-orange-600 rounded-lg flex items-center justify-center text-white">
+        bg-gradient-to-tr (Chéo lên phải)</div>
+    </div>
+  </section>
+
+  <!-- 7. Shadows - Đổ bóng -->
+  <!-- https://tailwindcss.com/docs/box-shadow -->
+  <section>
+    <h1>7. Box Shadows - Đổ bóng khối</h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="p-6 bg-white shadow-sm border text-center">shadow-sm</div>
+      <div class="p-6 bg-white shadow border text-center">shadow-base</div>
+      <div class="p-6 bg-white shadow-md border text-center">shadow-md</div>
+      <div class="p-6 bg-white shadow-lg border text-center">shadow-lg</div>
+      <div class="p-6 bg-white shadow-xl border text-center">shadow-xl</div>
+      <div class="p-6 bg-white shadow-2xl border text-center">shadow-2xl</div>
+      <div class="p-6 bg-white shadow-inner border text-center">shadow-inner</div>
+      <div class="p-6 bg-white shadow-none border text-center">shadow-none</div>
     </div>
 
-    <!-- Gradients -->
-    <!-- https://tailwindcss.com/docs/gradient-color-stops -->
-    <div
-      class="h-40 bg-gradient-to-r from-pink-100 to-red-500 m-10 text-center p-40"
-    >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta quas
-      eaque doloribus esse, obcaecati consectetur aperiam odit, deserunt
-      officiis natus magni perspiciatis iure quos hic eveniet ipsum voluptas?
-      Corrupti, neque?
+    <!-- Colored Shadows -->
+    <h3 class="font-bold mt-8 mb-4">7.1. Colored Shadows (Tailwind v3+)</h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="p-6 bg-blue-500 shadow-lg shadow-blue-500/50 text-white text-center">Blue Shadow</div>
+      <div class="p-6 bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white text-center">Indigo Shadow</div>
+      <div class="p-6 bg-rose-500 shadow-lg shadow-rose-500/50 text-white text-center">Rose Shadow</div>
     </div>
-    <div
-      class="h-40 bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-500 m-10 text-center p-40"
-    >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi enim
-      optio illum necessitatibus dolorem harum eaque. Necessitatibus velit
-      consectetur quisquam consequuntur perspiciatis, similique ad libero,
-      dolores eum, quia perferendis.
+  </section>
+
+  <!-- 8. Drop Shadows (Filters) - Đổ bóng theo hình dạng (SVG/PNG) -->
+  <!-- https://tailwindcss.com/docs/drop-shadow -->
+  <section>
+    <h1>8. Drop Shadows (Filter) - Đổ bóng theo hình ảnh</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="p-6 flex flex-col items-center">
+        <p class="mb-4 text-sm font-bold italic">Sử dụng cho ảnh PNG có nền trong suốt</p>
+        <img src="./image/cyber-security.png" class="w-32 drop-shadow-md" alt="PNG with drop shadow">
+        <span class="mt-2">drop-shadow-md</span>
+      </div>
+      <div class="p-6 flex flex-col items-center">
+        <p class="mb-4 text-sm font-bold italic">Sử dụng cho các hình đa giác (polygon)</p>
+        <div class="w-32 h-32 bg-amber-400 [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] drop-shadow-2xl"></div>
+        <span class="mt-2">drop-shadow-2xl</span>
+      </div>
     </div>
-  </body>
+  </section>
+
+</body>
+
 </html>
