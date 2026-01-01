@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Transform & Transition - Complete Tutorial</title>
+</head>
+
+<body class="p-20 space-y-16">
+
+  <!-- 1. Transition - Hiệu ứng chuyển cảnh -->
+  <!-- https://tailwindcss.com/docs/transition-property -->
+  <section>
+    <h1>1. Transitions - Hiệu ứng chuyển đổi</h1>
+    <div class="space-y-8">
+      <!-- Basic Transition -->
+      <div>
+        <h3 class="font-bold mb-2">1.1. Transition Properties & Duration</h3>
+        <div class="flex gap-4">
+          <button class="p-4 bg-blue-500 text-white rounded hover:bg-red-500">No Transition (Tức thì)</button>
+          <button class="p-4 bg-blue-500 text-white rounded transition-colors duration-500 hover:bg-emerald-500">With
+            Transition (Mượt mà)</button>
+        </div>
+      </div>
+
+      <!-- Ease & Delay -->
+      <div>
+        <h3 class="font-bold mb-2">1.2. Timing Function (Ease) & Delay</h3>
+        <div class="flex gap-4">
+          <button
+            class="p-4 bg-indigo-500 text-white rounded transition-all duration-700 ease-in hover:translate-x-10">ease-in</button>
+          <button
+            class="p-4 bg-indigo-500 text-white rounded transition-all duration-700 ease-out hover:translate-x-10">ease-out</button>
+          <button
+            class="p-4 bg-indigo-500 text-white rounded transition-all duration-700 ease-in-out delay-300 hover:translate-x-10">ease-in-out
+            (Delay 300ms)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Transform: Scale - Co giãn -->
+  <!-- https://tailwindcss.com/docs/scale -->
+  <section>
+    <h1>2. Transform: Scale - Co giãn</h1>
+    <div class="flex flex-wrap gap-12 pt-4">
+      <div
+        class="w-32 h-32 bg-amber-400 p-4 transition duration-300 hover:scale-125 flex items-center justify-center font-bold shadow">
+        scale-125</div>
+      <div
+        class="w-32 h-32 bg-amber-400 p-4 transition duration-300 hover:scale-75 flex items-center justify-center font-bold shadow">
+        scale-75</div>
+      <div
+        class="w-32 h-32 bg-amber-400 p-4 transition duration-300 hover:scale-x-150 flex items-center justify-center font-bold shadow text-center text-xs">
+        scale-x-150 (Chỉ ngang)</div>
+      <div
+        class="w-32 h-32 bg-amber-400 p-4 transition duration-300 hover:scale-y-125 flex items-center justify-center font-bold shadow text-center text-xs">
+        scale-y-125 (Chỉ dọc)</div>
+    </div>
+  </section>
+
+  <!-- 3. Transform: Rotate - Xoay -->
+  <!-- https://tailwindcss.com/docs/rotate -->
+  <section>
+    <h1>3. Transform: Rotate - Xoay</h1>
+    <div class="flex flex-wrap gap-12 pt-4">
+      <div
+        class="w-32 h-32 bg-rose-400 p-4 transition duration-300 hover:rotate-45 flex items-center justify-center font-bold shadow">
+        rotate-45</div>
+      <div
+        class="w-32 h-32 bg-rose-400 p-4 transition duration-300 hover:rotate-90 flex items-center justify-center font-bold shadow">
+        rotate-90</div>
+      <div
+        class="w-32 h-32 bg-rose-400 p-4 transition duration-300 hover:rotate-180 flex items-center justify-center font-bold shadow">
+        rotate-180</div>
+      <div
+        class="w-32 h-32 bg-rose-400 p-4 transition duration-300 hover:-rotate-12 flex items-center justify-center font-bold shadow">
+        -rotate-12</div>
+    </div>
+  </section>
+
+  <!-- 4. Transform: Translate - Di chuyển -->
+  <!-- https://tailwindcss.com/docs/translate -->
+  <section>
+    <h1>4. Transform: Translate - Di chuyển</h1>
+    <div class="flex flex-wrap gap-12 pt-4">
+      <div
+        class="w-32 h-32 bg-cyan-400 p-4 transition duration-300 hover:translate-x-6 flex items-center justify-center font-bold shadow">
+        translate-x-6</div>
+      <div
+        class="w-32 h-32 bg-cyan-400 p-4 transition duration-300 hover:-translate-y-6 flex items-center justify-center font-bold shadow">
+        -translate-y-6</div>
+      <div
+        class="w-32 h-32 bg-cyan-400 p-4 transition duration-300 hover:translate-x-4 hover:translate-y-4 flex items-center justify-center font-bold shadow text-center text-xs">
+        both axes</div>
+    </div>
+  </section>
+
+  <!-- 5. Transform: Skew - Nghiêng -->
+  <!-- https://tailwindcss.com/docs/skew -->
+  <section>
+    <h1>5. Transform: Skew - Nghiêng</h1>
+    <div class="flex flex-wrap gap-12 pt-4">
+      <div
+        class="w-32 h-32 bg-fuchsia-400 p-4 transition duration-300 hover:skew-x-12 flex items-center justify-center font-bold shadow text-xs">
+        skew-x-12 (Nghiêng ngang)</div>
+      <div
+        class="w-32 h-32 bg-fuchsia-400 p-4 transition duration-300 hover:skew-y-12 flex items-center justify-center font-bold shadow text-xs">
+        skew-y-12 (Nghiêng dọc)</div>
+    </div>
+  </section>
+
+  <!-- 6. Transform Origin - Tâm biến đổi -->
+  <!-- https://tailwindcss.com/docs/transform-origin -->
+  <section>
+    <h1>6. Transform Origin - Điểm xoay/biến đổi</h1>
+    <div class="flex flex-wrap gap-12 pt-4">
+      <div class="w-32 h-32 bg-purple-200 border border-purple-400 relative">
+        <div
+          class="w-full h-full bg-purple-500 text-white transition duration-500 hover:rotate-45 origin-center flex items-center justify-center text-xs text-center p-2">
+          origin-center (Mặc định)</div>
+      </div>
+      <div class="w-32 h-32 bg-purple-200 border border-purple-400 relative">
+        <div
+          class="w-full h-full bg-purple-500 text-white transition duration-500 hover:rotate-45 origin-top-left flex items-center justify-center text-xs text-center p-2">
+          origin-top-left (Xoay từ góc trên trái)</div>
+      </div>
+      <div class="w-32 h-32 bg-purple-200 border border-purple-400 relative">
+        <div
+          class="w-full h-full bg-purple-500 text-white transition duration-500 hover:scale-x-0 origin-left flex items-center justify-center text-xs text-center p-2">
+          origin-left (Thu lại từ trái)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Animation - Hoạt ảnh -->
+  <!-- https://tailwindcss.com/docs/animation -->
+  <section class="pb-20">
+    <h1>7. Animation - Hoạt ảnh mặc định</h1>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="flex flex-col items-center gap-4">
+        <div
+          class="w-20 h-20 bg-emerald-500 rounded-lg animate-spin flex items-center justify-center text-white text-xs">
+          Spin</div>
+        <span class="font-mono text-sm">animate-spin</span>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-4 h-4 bg-red-400 rounded-full animate-ping"></div>
+        <span class="font-mono text-sm">animate-ping</span>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div
+          class="w-20 h-20 bg-blue-500 rounded animate-pulse flex items-center justify-center text-white text-xs text-center">
+          Pulse (Loading)</div>
+        <span class="font-mono text-sm">animate-pulse</span>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div
+          class="w-20 h-20 bg-amber-500 rounded-full animate-bounce flex items-center justify-center text-white text-xs">
+          Bounce</div>
+        <span class="font-mono text-sm">animate-bounce</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
