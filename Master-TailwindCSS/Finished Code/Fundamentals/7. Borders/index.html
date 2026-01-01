@@ -1,55 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Borders</title>
-  </head>
-  <body>
-    <!-- Border Width & Colors -->
-    <!-- https://tailwindcss.com/docs/border-width -->
-    <div class="border-2 border-green-100 m-10">
-      <div class="w-96 m-3 p-5 border">Border All Around</div>
-      <div class="w-96 m-3 p-5 border border-2">Border Width</div>
-      <div class="w-96 m-3 p-5 border-4 border-green-500">Colord Border</div>
-      <div class="w-96 m-3 p-5 border-x-2 border-green-500">
-        Border Applied To X Axies
-      </div>
 
-      <div class="w-96 m-3 p-5 border-y-2 border-green-500">
-        Border Applied To Y Axies
-      </div>
-      <div class="w-96 m-3 p-5 border-r-2 border-green-500">Border Right</div>
-      <div class="w-96 m-3 p-5 border-l-2 border-green-500">Border Left</div>
-      <div class="w-96 m-3 p-5 border-b-2 border-green-500">Border Bottom</div>
-      <div class="w-96 m-3 p-5 border-t-2 border-green-500">Border Top</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Borders - Complete Tutorial</title>
+</head>
+
+<body class="p-20 space-y-12">
+
+  <!-- 1. Border Width & Color - Độ dày & Màu viền -->
+  <!-- https://tailwindcss.com/docs/border-width -->
+  <section>
+    <h1>1. Border Width & Color - Độ dày & Màu viền</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-5 border border-slate-300">border (1px)</div>
+      <div class="p-5 border-2 border-slate-300">border-2 (2px)</div>
+      <div class="p-5 border-4 border-blue-500">border-4 border-blue-500</div>
+      <div class="p-5 border-8 border-red-500/50">border-8 (Opacity 50%)</div>
+      <!-- Individual Sides -->
+      <div class="p-5 border-t-4 border-indigo-500 bg-slate-50">border-t-4 (Viền trên)</div>
+      <div class="p-5 border-b-4 border-indigo-500 bg-slate-50">border-b-4 (Viền dưới)</div>
+      <div class="p-5 border-l-8 border-indigo-500 bg-slate-50">border-l-8 (Viền trái)</div>
+      <div class="p-5 border-r-8 border-indigo-500 bg-slate-50">border-r-8 (Viền phải)</div>
+      <!-- Logical Properties -->
+      <div class="p-5 border-s-4 border-pink-500 bg-slate-50">border-s-4 (Start - Viền đầu dòng)</div>
+      <div class="p-5 border-e-4 border-pink-500 bg-slate-50">border-e-4 (End - Viền cuối dòng)</div>
     </div>
+  </section>
 
-    <!-- Border Radius -->
-    <!-- https://tailwindcss.com/docs/border-radius -->
-    <div class="border-2 border-green-100 m-10">
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded">Border Rounded</div>
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded-lg">
-        Border Rounded Large
-      </div>
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded-xl">
-        Border Rounded Extra Large
-      </div>
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded-2xl">Border Rounded 2xl</div>
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded-3xl">Border 3xl</div>
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded-full">
-        Border Rounded Full
-      </div>
+  <!-- 2. Border Style - Kiểu đường viền -->
+  <!-- https://tailwindcss.com/docs/border-style -->
+  <section>
+    <h1>2. Border Style - Kiểu đường viền</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+      <div class="p-5 border-4 border-slate-400 border-solid">border-solid (Mặc định)</div>
+      <div class="p-5 border-4 border-slate-400 border-dashed">border-dashed (Nét đứt)</div>
+      <div class="p-5 border-4 border-slate-400 border-dotted">border-dotted (Chấm bi)</div>
+      <div class="p-5 border-4 border-slate-400 border-double">border-double (Nét đôi)</div>
+      <div class="p-5 border-4 border-slate-400 border-none bg-slate-100">border-none (Không viền)</div>
+    </div>
+  </section>
 
-      <!-- Specific Sides -->
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded-t-xl">
-        Border Top Rounded
+  <!-- 3. Border Radius - Bo góc -->
+  <!-- https://tailwindcss.com/docs/border-radius -->
+  <section>
+    <h1>3. Border Radius - Bo góc</h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="p-8 bg-teal-100 rounded-none border border-teal-300">rounded-none</div>
+      <div class="p-8 bg-teal-100 rounded-sm border border-teal-300">rounded-sm</div>
+      <div class="p-8 bg-teal-100 rounded border border-teal-300">rounded</div>
+      <div class="p-8 bg-teal-100 rounded-md border border-teal-300">rounded-md</div>
+      <div class="p-8 bg-teal-100 rounded-lg border border-teal-300">rounded-lg</div>
+      <div class="p-8 bg-teal-100 rounded-xl border border-teal-300">rounded-xl</div>
+      <div class="p-8 bg-teal-100 rounded-2xl border border-teal-300">rounded-2xl</div>
+      <div class="p-8 bg-teal-100 rounded-3xl border border-teal-300">rounded-3xl</div>
+      <div class="p-8 bg-teal-100 rounded-full border border-teal-300">rounded-full</div>
+    </div>
+    <!-- Custom corners -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      <div class="p-8 bg-amber-100 rounded-t-3xl border border-amber-300 text-center">rounded-t-3xl (Bo 2 góc trên)
       </div>
-      <div class="w-96 m-3 p-5 bg-teal-200 rounded-b-xl">
-        Border Bottom Rounded
+      <div class="p-8 bg-amber-100 rounded-l-full border border-amber-300 text-center">rounded-l-full (Bo bên trái)
+      </div>
+      <div class="p-8 bg-amber-100 rounded-br-3xl border border-amber-300 text-center">rounded-br-3xl (Góc dưới phải)
       </div>
     </div>
-  </body>
+  </section>
+
+  <!-- 4. Divide Utilities - Đường chia giữa các phần tử -->
+  <!-- https://tailwindcss.com/docs/divide-width -->
+  <section>
+    <h1>4. Divide Utilities - Đường kẻ phân cách</h1>
+    <div class="space-y-6">
+      <h3 class="font-bold">4.1. Dọc (divide-y)</h3>
+      <div class="divide-y-4 divide-slate-400 bg-slate-50 border">
+        <div class="p-3 text-center">Phần 1</div>
+        <div class="p-3 text-center">Phần 2</div>
+        <div class="p-3 text-center">Phần 3</div>
+      </div>
+
+      <h3 class="font-bold pt-4">4.2. Ngang (divide-x)</h3>
+      <div class="flex divide-x-2 divide-blue-500 bg-blue-50 border">
+        <div class="p-4 flex-1 text-center">Mục A</div>
+        <div class="p-4 flex-1 text-center">Mục B</div>
+        <div class="p-4 flex-1 text-center">Mục C</div>
+      </div>
+
+      <h3 class="font-bold pt-4">4.3. Kiểu nét đứt (divide-dashed)</h3>
+      <div class="divide-y divide-dashed divide-red-400 border border-red-200">
+        <div class="p-2">Danh sách nét đứt...</div>
+        <div class="p-2">Dòng tiếp theo...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Outline - Đường viền ngoài -->
+  <!-- https://tailwindcss.com/docs/outline-width -->
+  <section>
+    <h1>5. Outline - Đường viền ngoài (Tránh chiếm diện tích)</h1>
+    <div class="flex flex-wrap gap-12">
+      <button class="p-3 bg-white outline outline-2 outline-blue-500 rounded">outline-2</button>
+      <button
+        class="p-3 bg-white outline outline-4 outline-offset-4 outline-indigo-500 rounded">outline-offset-4</button>
+      <!-- State variants -->
+      <input type="text" placeholder="Click vào đây..."
+        class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-purple-500" />
+    </div>
+  </section>
+
+  <!-- 6. Ring - Viền hào quang -->
+  <!-- https://tailwindcss.com/docs/ring-width -->
+  <section>
+    <h1>6. Ring - Viền hào quang (Dùng đổ bóng giả lập viền)</h1>
+    <div class="flex flex-wrap gap-12 pt-4">
+      <div class="p-6 bg-white ring-2 ring-blue-500 rounded shadow">ring-2 blue</div>
+      <div class="p-6 bg-white ring-4 ring-indigo-500 ring-offset-4 rounded shadow">ring-offset-4</div>
+      <div class="p-6 bg-white ring-inset ring-4 ring-rose-500 rounded shadow">ring-inset (Viền vào trong)</div>
+    </div>
+  </section>
+
+  <!-- 7. Responsive & States - Đáp ứng & Trạng thái -->
+  <section>
+    <h1>7. Responsive & States - Tương tác</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div
+        class="p-6 border-2 border-slate-300 hover:border-blue-500 hover:border-dashed cursor-pointer transition-all rounded text-center">
+        Hover để đổi viền (hover:border-blue-500)
+      </div>
+      <div class="p-6 border-4 border-slate-300 md:border-green-500 rounded text-center">
+        Màn hình trên 768px viền sẽ màu xanh (md:border-green-500)
+      </div>
+    </div>
+  </section>
+
+</body>
+
 </html>
