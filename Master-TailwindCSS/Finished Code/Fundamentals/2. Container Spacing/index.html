@@ -1,61 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Container & Spacing</title>
-    <style>
-      body { padding: 5rem; }
-    </style>
-  </head>
-  <body>
-    
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Container & Spacing - Complete Tutorial</title>
+  <style>
+    body {
+      padding: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 1. Container - Bộ chứa responsive -->
+  <!-- https://tailwindcss.com/docs/container -->
+  <h1>1. Container - Bộ chứa responsive</h1>
+  <div class="container bg-blue-100 p-4 mb-4">
+    Container cơ bản (tự động responsive)
+  </div>
+  <div class="container mx-auto bg-blue-200 p-4 mb-4">
+    Container với mx-auto (căn giữa)
+  </div>
+  <div class="container mx-auto px-4 bg-blue-300 p-4">
+    Container với padding ngang
+  </div>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- 2. Margin - Khoảng cách bên ngoài -->
   <!-- https://tailwindcss.com/docs/margin -->
-      <!-- Margin -->
-      <h3 class="uppercase">1. Margin</h3>
-      <div class="m-4 bg-yellow-100">Margin all around</div>
-      <div class="mx-4 bg-yellow-200">Margin from x axies</div>
-      <div class="my-4 bg-yellow-300">Margin Y axies</div>
-      <div class="mt-6 bg-yellow-400">Margin Top</div>
-      <div class="mr-4 bg-yellow-500">Margin Right</div>
-      <div class="ml-2 bg-yellow-700">Margin Left</div>
-      <div class="mb-8 bg-yellow-600">Margin Bottom</div>
+  <h1>2. Margin - Khoảng cách bên ngoài</h1>
 
-      <!-- Arbitrary Spacing -->
-      <div class="m-[200px] bg-slate-700">2. Margin all around</div>
+  <!-- Margin All Sides -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">2.1. Margin All Sides - Tất cả các hướng</h3>
+  <div class="m-4 bg-yellow-100 p-2">m-4 - Margin 4 tất cả hướng</div>
+  <div class="m-8 bg-yellow-200 p-2">m-8 - Margin 8 tất cả hướng</div>
 
+  <!-- Margin X & Y Axis -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">2.2. Margin X & Y - Theo trục</h3>
+  <div class="mx-4 bg-yellow-300 p-2">mx-4 - Margin ngang (left + right)</div>
+  <div class="my-4 bg-yellow-400 p-2">my-4 - Margin dọc (top + bottom)</div>
 
-      <!-- https://tailwindcss.com/docs/padding -->
-      <!-- Padding -->
-      <h3 class="my-4">3. Padding</h3>
-      <div class="p-4 bg-lime-100">Padding all around</div>
-      <div class="px-4 bg-lime-200">Padding X axies</div>
-      <div class="py-4 bg-lime-300">Padding Y axies</div>
-      <div class="pt-6 bg-lime-400">Padding Top</div>
-      <div class="pr-4 bg-lime-500">Padding Right</div>
-      <div class="pb-8 bg-lime-600">Padding Bottom</div>
-      <div class="pl-2 bg-lime-700">Padding Left</div>
+  <!-- Margin Individual Sides -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">2.3. Margin Individual Sides - Từng hướng</h3>
+  <div class="mt-6 bg-yellow-500 p-2">mt-6 - Margin Top</div>
+  <div class="mr-4 bg-yellow-600 p-2">mr-4 - Margin Right</div>
+  <div class="mb-8 bg-yellow-700 p-2">mb-8 - Margin Bottom</div>
+  <div class="ml-2 bg-yellow-800 p-2 text-white">ml-2 - Margin Left</div>
 
+  <!-- Margin Auto (Centering) -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">2.4. Margin Auto - Căn giữa</h3>
+  <div class="w-64 mx-auto bg-green-400 p-2 text-center">mx-auto - Căn giữa ngang</div>
+  <div class="w-64 ml-auto bg-green-500 p-2 text-right">ml-auto - Căn phải</div>
+  <div class="w-64 mr-auto bg-green-600 p-2">mr-auto - Căn trái</div>
 
-      <!-- https://tailwindcss.com/docs/space -->
-      <!-- Space Between X -->
-      <h3 class="my-4">Space Between X</h3>
-      <div class="flex space-x-4">
-        <div class="p-3 bg-teal-100">01</div>
-        <div class="p-3 bg-teal-200">02</div>
-        <div class="p-3 bg-teal-300">03</div>
-      </div>
+  <!-- Negative Margin -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">2.5. Negative Margin - Margin âm</h3>
+  <div class="bg-gray-200 p-4">
+    <div class="bg-red-400 p-2">Box bình thường</div>
+    <div class="-mt-4 bg-red-500 p-2">-mt-4 - Negative Margin Top (chồng lên trên)</div>
+  </div>
+  <div class="bg-gray-200 p-4 mt-4">
+    <div class="-mx-4 bg-red-600 p-2">-mx-4 - Negative Margin X (tràn ra ngoài)</div>
+  </div>
 
-      <!-- Space Between Y -->
-      <h3 class="my-4">Space Between Y</h3>
-      <div class="flex flex-col space-y-4">
-        <div class="p-3 bg-teal-400">01</div>
-        <div class="p-3 bg-teal-500">02</div>
-        <div class="p-3 bg-teal-600">03</div>
-      </div>
-    </div>
-  </body>
+  <!-- Arbitrary Margin -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">2.6. Arbitrary Margin - Margin tùy chỉnh</h3>
+  <div class="m-[50px] bg-slate-700 text-white p-2">m-[50px] - Custom Margin 50px</div>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- 3. Padding - Khoảng cách bên trong -->
+  <!-- https://tailwindcss.com/docs/padding -->
+  <h1>3. Padding - Khoảng cách bên trong</h1>
+
+  <!-- Padding All Sides -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">3.1. Padding All Sides - Tất cả các hướng</h3>
+  <div class="p-4 bg-lime-100">p-4 - Padding 4 tất cả hướng</div>
+  <div class="p-8 bg-lime-200 mt-2">p-8 - Padding 8 tất cả hướng</div>
+
+  <!-- Padding X & Y -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">3.2. Padding X & Y - Theo trục</h3>
+  <div class="px-8 bg-lime-300 mt-2">px-8 - Padding ngang</div>
+  <div class="py-8 bg-lime-400 mt-2">py-8 - Padding dọc</div>
+
+  <!-- Padding Individual Sides -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">3.3. Padding Individual Sides - Từng hướng</h3>
+  <div class="pt-6 bg-lime-500 mt-2">pt-6 - Padding Top</div>
+  <div class="pr-8 bg-lime-600 mt-2">pr-8 - Padding Right</div>
+  <div class="pb-8 bg-lime-700 mt-2">pb-8 - Padding Bottom</div>
+  <div class="pl-8 bg-lime-800 text-white mt-2">pl-8 - Padding Left</div>
+
+  <!-- Arbitrary Padding -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">3.4. Arbitrary Padding - Padding tùy chỉnh</h3>
+  <div class="p-[30px] bg-purple-400 text-white mt-2">p-[30px] - Custom Padding 30px</div>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- 4. Space Between - Khoảng cách giữa các phần tử -->
+  <!-- https://tailwindcss.com/docs/space -->
+  <h1>4. Space Between - Khoảng cách giữa các phần tử</h1>
+
+  <!-- Space Between X -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">4.1. Space Between X - Khoảng cách ngang</h3>
+  <div class="flex space-x-4 bg-gray-100 p-4">
+    <div class="p-4 bg-teal-200">Item 1</div>
+    <div class="p-4 bg-teal-300">Item 2</div>
+    <div class="p-4 bg-teal-400">Item 3</div>
+  </div>
+
+  <!-- Space Between Y -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">4.2. Space Between Y - Khoảng cách dọc</h3>
+  <div class="flex flex-col space-y-4 bg-gray-100 p-4">
+    <div class="p-4 bg-teal-500">Item 1</div>
+    <div class="p-4 bg-teal-600">Item 2</div>
+    <div class="p-4 bg-teal-700 text-white">Item 3</div>
+  </div>
+
+  <!-- Space Reverse -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">4.3. Space Reverse - Đảo ngược khoảng cách</h3>
+  <div class="flex flex-row-reverse space-x-4 space-x-reverse bg-gray-100 p-4">
+    <div class="p-4 bg-cyan-200">First (right)</div>
+    <div class="p-4 bg-cyan-300">Second</div>
+    <div class="p-4 bg-cyan-400">Third (left)</div>
+  </div>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- 5. Gap - Khoảng cách trong Grid/Flex -->
+  <!-- https://tailwindcss.com/docs/gap -->
+  <h1>5. Gap - Khoảng cách trong Grid/Flex</h1>
+
+  <!-- Gap in Flex -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">5.1. Gap in Flex - Gap trong Flexbox</h3>
+  <div class="flex gap-4 bg-gray-100 p-4">
+    <div class="p-4 bg-indigo-200">Item 1</div>
+    <div class="p-4 bg-indigo-300">Item 2</div>
+    <div class="p-4 bg-indigo-400">Item 3</div>
+  </div>
+
+  <!-- Gap in Grid -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">5.2. Gap in Grid - Gap trong Grid</h3>
+  <div class="grid grid-cols-3 gap-4 bg-gray-100 p-4">
+    <div class="p-4 bg-pink-200">01</div>
+    <div class="p-4 bg-pink-300">02</div>
+    <div class="p-4 bg-pink-400">03</div>
+    <div class="p-4 bg-pink-500">04</div>
+    <div class="p-4 bg-pink-600">05</div>
+    <div class="p-4 bg-pink-700 text-white">06</div>
+  </div>
+
+  <!-- Gap X & Y -->
+  <h3 class="text-lg font-semibold mt-4 mb-2">5.3. Gap X & Y - Gap theo trục</h3>
+  <div class="grid grid-cols-2 gap-x-8 gap-y-2 bg-gray-100 p-4">
+    <div class="p-4 bg-orange-200">gap-x-8</div>
+    <div class="p-4 bg-orange-300">gap-x-8</div>
+    <div class="p-4 bg-orange-400">gap-y-2</div>
+    <div class="p-4 bg-orange-500">gap-y-2</div>
+  </div>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- 6. Responsive Spacing - Spacing responsive -->
+  <h1>6. Responsive Spacing - Spacing responsive</h1>
+  <h3 class="text-lg font-semibold mt-4 mb-2">Thay đổi kích thước trình duyệt để xem responsive</h3>
+
+  <div class="m-2 md:m-4 lg:m-8 xl:m-12 bg-purple-200 p-4">
+    Responsive Margin: m-2 (mobile) → m-4 (tablet) → m-8 (desktop) → m-12 (large)
+  </div>
+
+  <div class="p-2 md:p-4 lg:p-8 xl:p-12 bg-purple-300 mt-4">
+    Responsive Padding: p-2 → p-4 → p-8 → p-12
+  </div>
+
+  <div class="container mx-auto px-4 md:px-6 lg:px-8 bg-purple-400 p-4 mt-4">
+    Container với responsive padding: px-4 → px-6 → px-8
+  </div>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- 7. Logical Properties - Thuộc tính logic (RTL/LTR) -->
+  <!-- https://tailwindcss.com/docs/margin#using-logical-properties -->
+  <h1>7. Logical Properties - Thuộc tính logic (RTL/LTR)</h1>
+
+  <h3 class="text-lg font-semibold mt-4 mb-2">7.1. Margin Inline Start/End</h3>
+  <div class="ms-8 bg-rose-200 p-2">ms-8 - Margin Inline Start (trái với LTR)</div>
+  <div class="me-8 bg-rose-300 p-2 mt-2">me-8 - Margin Inline End (phải với LTR)</div>
+
+  <h3 class="text-lg font-semibold mt-4 mb-2">7.2. Padding Inline Start/End</h3>
+  <div class="ps-8 bg-rose-400 p-2 mt-2">ps-8 - Padding Inline Start</div>
+  <div class="pe-8 bg-rose-500 p-2 mt-2">pe-8 - Padding Inline End</div>
+
+  <br />
+  <br />
+</body>
+
 </html>
-
