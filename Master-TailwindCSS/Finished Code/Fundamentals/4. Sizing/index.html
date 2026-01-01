@@ -1,111 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Sizing</title>
-  </head>
-  <body class="p-20">
-    <!-- Width -->
-    <!-- https://tailwindcss.com/docs/width -->
-    <h1>Width All Around</h1>
-    <div class="bg-teal-100 p-5">
-      <div class="bg-teal-600 w-0">0</div>
-      <div class="bg-teal-600 w-1">1</div>
-      <div class="bg-teal-600 w-1.5">1.5</div>
-      <div class="bg-teal-600 w-2">2</div>
-      <div class="bg-teal-600 w-3">3</div>
-      <div class="bg-teal-600 w-5">5</div>
-      <div class="bg-teal-600 w-6">6</div>
-      <div class="bg-teal-600 w-7">7</div>
-      <div class="bg-teal-600 w-8">8</div>
-      <div class="bg-teal-600 w-9">9</div>
-      <div class="bg-teal-600 w-10">10</div>
-      <div class="bg-teal-600 w-11">11</div>
-      <div class="bg-teal-600 w-12">12</div>
-      <div class="bg-teal-600 w-14">14</div>
-      <div class="bg-teal-600 w-16">16</div>
-      <div class="bg-teal-600 w-20">20</div>
-      <div class="bg-teal-600 w-24">24</div>
-      <div class="bg-teal-600 w-28">28</div>
-      <div class="bg-teal-600 w-32">32</div>
-      <div class="bg-teal-600 w-36">36</div>
-      <div class="bg-teal-600 w-64">64</div>
-      <div class="bg-teal-600 w-80">80</div>
-      <div class="bg-teal-600 w-96">96</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sizing - Complete Tutorial</title>
+</head>
+
+<body class="p-20">
+
+  <!-- 1. Width Fixed - Chiều rộng cố định -->
+  <!-- https://tailwindcss.com/docs/width -->
+  <h1>1. Width Fixed - Chiều rộng cố định</h1>
+  <div class="bg-teal-100 p-5 mb-10">
+    <div class="bg-teal-600 w-0 text-white">w-0</div>
+    <div class="bg-teal-600 w-1 text-white">w-1</div>
+    <div class="bg-teal-600 w-2 text-white">w-2</div>
+    <div class="bg-teal-600 w-4 text-white">w-4</div>
+    <div class="bg-teal-600 w-8 text-white">w-8</div>
+    <div class="bg-teal-600 w-12 text-white">w-12</div>
+    <div class="bg-teal-600 w-16 text-white">w-16</div>
+    <div class="bg-teal-600 w-24 text-white">w-24</div>
+    <div class="bg-teal-600 w-32 text-white">w-32</div>
+    <div class="bg-teal-600 w-48 text-white">w-48</div>
+    <div class="bg-teal-600 w-64 text-white">w-64</div>
+    <div class="bg-teal-600 w-80 text-white">w-80</div>
+    <div class="bg-teal-600 w-96 text-white">w-96</div>
+  </div>
+
+  <!-- 2. Width Percentages - Chiều rộng theo phần trăm -->
+  <h1>2. Width Percentages - Chiều rộng theo phần trăm</h1>
+  <div class="bg-teal-200 p-5 mb-10">
+    <div class="bg-green-400 p-2 mb-2 w-1/2">w-1/2 - 50%</div>
+    <div class="bg-green-400 p-2 mb-2 w-1/3">w-1/3 - 33.33%</div>
+    <div class="bg-green-400 p-2 mb-2 w-2/3">w-2/3 - 66.67%</div>
+    <div class="bg-green-400 p-2 mb-2 w-1/4">w-1/4 - 25%</div>
+    <div class="bg-green-400 p-2 mb-2 w-3/4">w-3/4 - 75%</div>
+    <div class="bg-green-400 p-2 mb-2 w-1/5">w-1/5 - 20%</div>
+    <div class="bg-green-400 p-2 w-full">w-full - 100%</div>
+  </div>
+
+  <!-- 3. Width Special - Chiều rộng đặc biệt -->
+  <h1>3. Width Special - Chiều rộng đặc biệt</h1>
+  <div class="bg-blue-100 p-5 mb-10">
+    <div class="bg-blue-400 p-2 mb-2 w-auto">w-auto - Tự động</div>
+    <div class="bg-blue-400 p-2 mb-2 w-screen">w-screen - Toàn màn hình ngang (100vw)</div>
+    <div class="bg-blue-400 p-2 mb-2 w-full">w-full - 100% container</div>
+    <div class="bg-blue-400 p-2 mb-2 w-min inline-block">w-min - Min content</div>
+    <div class="bg-blue-400 p-2 mb-2 w-max inline-block">w-max - Max content</div>
+    <div class="bg-blue-400 p-2 w-fit inline-block">w-fit - Fit content</div>
+  </div>
+
+  <!-- 4. Min Width - Chiều rộng tối thiểu -->
+  <!-- https://tailwindcss.com/docs/min-width -->
+  <h1>4. Min Width - Chiều rộng tối thiểu</h1>
+  <div class="bg-purple-100 p-5 mb-10">
+    <div class="bg-purple-400 p-2 mb-2 min-w-0">min-w-0 - Minimum 0</div>
+    <div class="bg-purple-400 p-2 mb-2 min-w-full">min-w-full - Minimum 100%</div>
+    <div class="bg-purple-400 p-2 mb-2 min-w-min inline-block">min-w-min - Min content</div>
+    <div class="bg-purple-400 p-2 mb-2 min-w-max inline-block">min-w-max - Max content</div>
+    <div class="bg-purple-400 p-2 min-w-fit inline-block">min-w-fit - Fit content</div>
+  </div>
+
+  <!-- 5. Max Width - Chiều rộng tối đa -->
+  <!-- https://tailwindcss.com/docs/max-width -->
+  <h1>5. Max Width - Chiều rộng tối đa</h1>
+  <div class="bg-yellow-100 p-5 mb-10">
+    <div class="bg-yellow-400 p-3 mb-3 max-w-xs">max-w-xs - 20rem (320px)</div>
+    <div class="bg-yellow-400 p-3 mb-3 max-w-sm">max-w-sm - 24rem (384px)</div>
+    <div class="bg-yellow-400 p-3 mb-3 max-w-md">max-w-md - 28rem (448px)</div>
+    <div class="bg-yellow-400 p-3 mb-3 max-w-lg">max-w-lg - 32rem (512px)</div>
+    <div class="bg-yellow-400 p-3 mb-3 max-w-xl">max-w-xl - 36rem (576px)</div>
+    <div class="bg-yellow-400 p-3 mb-3 max-w-2xl">max-w-2xl - 42rem (672px)</div>
+    <div class="bg-yellow-400 p-3 mb-3 max-w-4xl">max-w-4xl - 56rem (896px)</div>
+    <div class="bg-yellow-400 p-3 mb-3 max-w-full">max-w-full - 100%</div>
+    <div class="bg-yellow-400 p-3 max-w-screen-md">max-w-screen-md - Responsive breakpoint</div>
+  </div>
+
+  <!-- 6. Height Fixed - Chiều cao cố định -->
+  <!-- https://tailwindcss.com/docs/height -->
+  <h1>6. Height Fixed - Chiều cao cố định</h1>
+  <div class="flex items-end gap-2 bg-indigo-100 p-5 mb-10">
+    <div class="bg-indigo-400 px-3 h-8">h-8</div>
+    <div class="bg-indigo-400 px-3 h-12">h-12</div>
+    <div class="bg-indigo-400 px-3 h-16">h-16</div>
+    <div class="bg-indigo-400 px-3 h-24">h-24</div>
+    <div class="bg-indigo-400 px-3 h-32">h-32</div>
+    <div class="bg-indigo-400 px-3 h-40">h-40</div>
+    <div class="bg-indigo-400 px-3 h-48">h-48</div>
+    <div class="bg-indigo-400 px-3 h-64">h-64</div>
+  </div>
+
+  <!-- 7. Height Percentages - Chiều cao theo phần trăm -->
+  <h1>7. Height Percentages - Chiều cao theo phần trăm</h1>
+  <div class="h-64 bg-pink-100 p-5 mb-10 flex gap-2">
+    <div class="bg-pink-400 px-4 h-1/2">h-1/2 - 50%</div>
+    <div class="bg-pink-400 px-4 h-2/3">h-2/3 - 66.67%</div>
+    <div class="bg-pink-400 px-4 h-3/4">h-3/4 - 75%</div>
+    <div class="bg-pink-400 px-4 h-full">h-full - 100%</div>
+  </div>
+
+  <!-- 8. Height Special - Chiều cao đặc biệt -->
+  <h1>8. Height Special - Chiều cao đặc biệt</h1>
+  <div class="bg-green-100 p-5 mb-10">
+    <div class="bg-green-400 p-2 mb-2 h-auto">h-auto - Tự động</div>
+    <div class="bg-green-400 p-2 mb-2 h-full">h-full - 100% container</div>
+    <div class="bg-green-400 p-2 mb-2 h-screen">h-screen - 100vh (viewport height)</div>
+    <div class="bg-green-400 p-2 mb-2 h-dvh">h-dvh - Dynamic viewport height</div>
+    <div class="bg-green-400 p-2 mb-2 h-min inline-block">h-min - Min content</div>
+    <div class="bg-green-400 p-2 mb-2 h-max inline-block">h-max - Max content</div>
+    <div class="bg-green-400 p-2 h-fit inline-block">h-fit - Fit content</div>
+  </div>
+
+  <!-- 9. Min Height - Chiều cao tối thiểu -->
+  <!-- https://tailwindcss.com/docs/min-height -->
+  <h1>9. Min Height - Chiều cao tối thiểu</h1>
+  <div class="h-64 bg-cyan-100 p-5 mb-10">
+    <div class="bg-cyan-400 p-2 min-h-full">min-h-full - Chiếm đầy chiều cao container</div>
+  </div>
+  <div class="bg-cyan-100 p-5 mb-10">
+    <div class="bg-cyan-400 p-2 mb-2 min-h-0">min-h-0 - Minimum 0</div>
+    <div class="bg-cyan-400 p-2 mb-2 min-h-screen">min-h-screen - Minimum 100vh</div>
+  </div>
+
+  <!-- 10. Max Height - Chiều cao tối đa -->
+  <!-- https://tailwindcss.com/docs/max-height -->
+  <h1>10. Max Height - Chiều cao tối đa</h1>
+  <div class="h-48 bg-orange-100 p-5 mb-10">
+    <div class="bg-orange-400 p-2 h-96 max-h-full overflow-auto">
+      max-h-full - Giới hạn trong container. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nesciunt
+      quibusdam odio ea adipisci eos modi exercitationem harum facilis laudantium sint possimus doloribus quae vero,
+      expedita doloremque iure dignissimos! Eum.
+    </div>
+  </div>
+  <div class="bg-orange-100 p-5 mb-10">
+    <div class="bg-orange-400 p-2 mb-2 max-h-96 overflow-auto">max-h-96 - Maximum 24rem</div>
+    <div class="bg-orange-400 p-2 max-h-screen overflow-auto">max-h-screen - Maximum 100vh</div>
+  </div>
+
+  <!-- 11. Size (Width + Height) - Kích thước vuông -->
+  <!-- https://tailwindcss.com/docs/size -->
+  <h1>11. Size (Width + Height) - Kích thước vuông</h1>
+  <div class="bg-rose-100 p-5 mb-10 flex gap-3 items-end">
+    <div class="bg-rose-400 size-8 flex items-center justify-center">8</div>
+    <div class="bg-rose-400 size-12 flex items-center justify-center">12</div>
+    <div class="bg-rose-400 size-16 flex items-center justify-center">16</div>
+    <div class="bg-rose-400 size-24 flex items-center justify-center">24</div>
+    <div class="bg-rose-400 size-32 flex items-center justify-center">32</div>
+    <div class="bg-rose-400 size-48 flex items-center justify-center">48</div>
+  </div>
+
+  <!-- 12. Aspect Ratio - Tỷ lệ khung hình -->
+  <!-- https://tailwindcss.com/docs/aspect-ratio -->
+  <h1>12. Aspect Ratio - Tỷ lệ khung hình</h1>
+  <div class="bg-violet-100 p-5 mb-10">
+    <div class="grid grid-cols-3 gap-4">
+      <div class="bg-violet-400 aspect-square flex items-center justify-center">
+        aspect-square<br />1:1
+      </div>
+      <div class="bg-violet-400 aspect-video flex items-center justify-center">
+        aspect-video<br />16:9
+      </div>
+      <div class="bg-violet-400 aspect-[4/3] flex items-center justify-center">
+        aspect-[4/3]<br />4:3
+      </div>
+    </div>
+    <div class="mt-4 w-64">
+      <img src="https://via.placeholder.com/800x600" class="aspect-square object-cover" alt="Square aspect" />
+      <p class="text-center mt-2">Image with aspect-square</p>
+    </div>
+  </div>
+
+  <!-- 13. Arbitrary Values - Giá trị tùy chỉnh -->
+  <h1>13. Arbitrary Values - Giá trị tùy chỉnh</h1>
+  <div class="bg-amber-100 p-5 mb-10">
+    <div class="bg-amber-400 p-2 mb-2 w-[500px]">w-[500px] - Custom width 500px</div>
+    <div class="bg-amber-400 p-2 mb-2 h-[200px]">h-[200px] - Custom height 200px</div>
+    <div class="bg-amber-400 p-2 mb-2 max-w-[600px]">max-w-[600px] - Custom max width</div>
+    <div class="bg-amber-400 p-2 mb-2 size-[100px]">size-[100px] - Custom square size</div>
+    <div class="bg-amber-400 p-2 aspect-[21/9]">aspect-[21/9] - Custom aspect ratio 21:9</div>
+  </div>
+
+  <!-- 14. Responsive Sizing - Kích thước responsive -->
+  <h1>14. Responsive Sizing - Kích thước responsive</h1>
+  <div class="bg-sky-100 p-5 mb-10">
+    <div class="bg-sky-400 p-4 mb-4 w-32 md:w-48 lg:w-64 xl:w-96">
+      Responsive Width: w-32 → md:w-48 → lg:w-64 → xl:w-96
+    </div>
+    <div class="bg-sky-500 p-4 mb-4 h-24 md:h-32 lg:h-48">
+      Responsive Height: h-24 → md:h-32 → lg:h-48
+    </div>
+    <div class="bg-sky-600 p-4 max-w-md md:max-w-lg lg:max-w-2xl text-white">
+      Responsive Max Width: max-w-md → md:max-w-lg → lg:max-w-2xl
+    </div>
+  </div>
+
+  <!-- 15. Practical Examples - Ví dụ thực tế -->
+  <h1>15. Practical Examples - Ví dụ thực tế</h1>
+  <div class="bg-gray-100 p-5 mb-10">
+
+    <!-- Card with aspect ratio image -->
+    <div class="max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-6">
+      <div class="aspect-video bg-gradient-to-br from-blue-400 to-purple-500"></div>
+      <div class="p-4">
+        <h3 class="font-bold">Card với aspect-video</h3>
+        <p class="text-gray-600">Image luôn giữ tỷ lệ 16:9</p>
+      </div>
     </div>
 
-    <!-- Percentages -->
-    <h1 class="mt-5">Percentages</h1>
-    <div class="bg-teal-200 mb-5 p-5">
-      <div class="bg-green-400 p-2 mb-4 w-1/2">1/2</div>
-      <div class="bg-green-400 p-2 mb-4 w-1/3">1/3</div>
-      <div class="bg-green-400 p-2 mb-4 w-2/3">2/3</div>
-      <div class="bg-green-400 p-2 mb-4 w-1/4">1/4</div>
-      <div class="bg-green-400 p-2 mb-4 w-2/4">2/4</div>
-      <div class="bg-green-400 p-2 mb-4 w-3/4">3/4</div>
-      <div class="bg-green-400 p-2 mb-4 w-1/5">1/5</div>
+    <!-- Responsive container -->
+    <div class="w-full md:w-3/4 lg:w-1/2 mx-auto bg-white p-6 rounded-lg shadow">
+      <h3 class="font-bold mb-2">Responsive Container</h3>
+      <p>Full width trên mobile, 75% trên tablet, 50% trên desktop</p>
     </div>
 
-    <!-- Max Width -->
-    <!-- https://tailwindcss.com/docs/max-width -->
-    <h1 class="mt-5">Max Width</h1>
-    <div class="bg-yellow-100 p-10 mb-10 max-w-lg">
-      <!-- lorem 100 -->
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia
-      soluta harum officia, repellat odit ratione, eligendi voluptatem dolor
-      magni ad ipsum eaque quae iusto ullam odio voluptate. Eos culpa dolore
-      fugit ad enim consectetur iure temporibus explicabo voluptas ratione. Fuga
-      expedita dicta vero, ipsa accusantium illo aut corrupti nulla ipsam ex, a
-      sunt alias natus ratione. Explicabo sunt, dolor optio harum possimus quo
-      blanditiis velit fugiat officiis, voluptatem, pariatur quisquam omnis?
-      Debitis porro id aspernatur possimus, earum dolorum quia! Aperiam aliquam
-      totam illo praesentium, fugit repellendus! Assumenda optio autem quae odit
-      voluptatem ad facere et quas, itaque, inventore nihil.
-    </div>
+  </div>
 
-    <!-- Width of the viewport -->
-    <h1 class="mt-5">VW & Width100%</h1>
-    <div class="bg-green-500 my-2 p-5 w-screen">(vw) screen</div>
-    <!-- 100% of container -->
-    <div class="bg-green-500 my-2 p-5 w-full">(width 100%) w-full</div>
-    <!-- Arbitrary Width -->
-    <div class="bg-teal-500 text-white my-2 w-[500px]">
-      Arbitrary Width (500px)
-    </div>
+</body>
 
-    <!-- Height (Most of the same options as widths) -->
-    <!-- https://tailwindcss.com/docs/height -->
-    <h1 class="mt-5">Height All Around</h1>
-    <div class="flex items-end mt-20 mb-10">
-      <div class="bg-indigo-400 ml-5 h-24">height 24</div>
-      <div class="bg-indigo-400 ml-5 h-32">height 32</div>
-      <div class="bg-indigo-400 ml-5 h-40">height 40</div>
-      <div class="bg-indigo-400 ml-5 h-48">height 48</div>
-      <div class="bg-indigo-400 ml-5 h-64">height 64</div>
-      <div class="bg-indigo-400 ml-5 h-80">height 80</div>
-    </div>
-
-    <!-- Min Height -->
-    <!-- https://tailwindcss.com/docs/min-height -->
-    <h1 class="mt-5">Min Height Full</h1>
-    <div class="p-5 h-[400px] bg-green-300 mb-5">
-      <div class="min-h-full bg-teal-400">Take Full Height</div>
-    </div>
-
-    <!-- Max Height -->
-    <!-- https://tailwindcss.com/docs/max-height -->
-    <div class="h-[150px] bg-orange-200 mb-10">
-      <div class="m-20 bg-orange-500 h-48 max-h-full">Max Height Full</div>
-    </div>
-
-    <!-- Full screen height -->
-    <h1 class="mb-2">Full Screen Height</h1>
-    <div class="bg-pink-300 mb-4 h-screen">Hello</div>
-
-    <!-- Width Auto -->
-    <div class="bg-green-400 p-5 w-auto">Auto</div>
-  </body>
 </html>
