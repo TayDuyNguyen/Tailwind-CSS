@@ -1,44 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Grid</title>
-  </head>
-  <body class="p-10">
-    <!-- https://tailwindcss.com/docs/grid-template-rows -->
-    <!-- Grid cols and rows -->
-    <div class="w-100 grid grid-cols-3 grid-rows-4 gap-4">
-      <div class="p-10 bg-green-200">01</div>
-      <div class="p-10 bg-green-200">02</div>
-      <div class="p-10 bg-green-200">03</div>
-      <div class="p-10 bg-green-200">04</div>
-      <div class="p-10 bg-green-200">05</div>
-      <div class="p-10 bg-green-200">06</div>
-      <div class="p-10 bg-green-200">07</div>
-      <div class="p-10 bg-green-200">08</div>
-      <div class="p-10 bg-green-200">09</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Grid - Complete Tutorial</title>
+</head>
+
+<body class="p-20 space-y-16">
+
+  <!-- 1. Grid Template Columns & Rows - Định nghĩa cột và hàng -->
+  <!-- https://tailwindcss.com/docs/grid-template-columns -->
+  <section>
+    <h1>1. Grid Template Columns & Rows - Định nghĩa Cột & Hàng</h1>
+    <div class="space-y-4">
+      <h3 class="font-bold">1.1. Grid 3 Cột (grid-cols-3)</h3>
+      <div class="grid grid-cols-3 gap-4 bg-slate-100 p-4 border rounded">
+        <div class="p-8 bg-blue-500 text-white text-center">01</div>
+        <div class="p-8 bg-blue-500 text-white text-center">02</div>
+        <div class="p-8 bg-blue-500 text-white text-center">03</div>
+        <div class="p-8 bg-blue-500 text-white text-center">04</div>
+      </div>
+
+      <h3 class="font-bold pt-4">1.2. Grid 4 Hàng (grid-rows-4)</h3>
+      <div class="grid grid-rows-4 grid-flow-col gap-4 bg-slate-100 p-4 border rounded h-80">
+        <div class="p-4 bg-emerald-500 text-white text-center">R1</div>
+        <div class="p-4 bg-emerald-500 text-white text-center">R2</div>
+        <div class="p-4 bg-emerald-500 text-white text-center">R3</div>
+        <div class="p-4 bg-emerald-500 text-white text-center">R4</div>
+      </div>
     </div>
+  </section>
 
-    <!-- Col and row span -->
-    <div class="w-100 grid grid-cols-3 gap-4">
-      <div class="bg-teal-200 col-span-2 row-span-2 p-10">01</div>
-      <div class="p-10 bg-teal-200">02</div>
-      <div class="p-10 bg-teal-200">03</div>
-      <div class="p-10 bg-teal-200">04</div>
-      <div class="p-10 bg-teal-200">05</div>
-      <div class="p-10 bg-teal-200">06</div>
-
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <div class="p-10 bg-teal-200 col-span-3">07</div>
-      <div class="p-10 bg-teal-200">08</div>
-      <div class="p-10 bg-teal-200 col-span-2">09</div>
+  <!-- 2. Grid Column & Row Span - Gộp ô -->
+  <!-- https://tailwindcss.com/docs/grid-column -->
+  <section>
+    <h1>2. Grid Column & Row Span - Gộp Cột & Hàng</h1>
+    <div class="grid grid-cols-3 gap-4 bg-slate-100 p-4 border">
+      <div class="col-span-2 row-span-2 bg-indigo-500 text-white p-10 flex items-center justify-center">
+        col-span-2, row-span-2
+      </div>
+      <div class="bg-indigo-300 p-10">02</div>
+      <div class="bg-indigo-300 p-10">03</div>
+      <div class="bg-indigo-300 p-10">04</div>
+      <div class="col-span-3 bg-indigo-700 text-white p-4 text-center">col-span-3 (Full Width)</div>
     </div>
-  </body>
+  </section>
+
+  <!-- 3. Grid Column/Row Start & End - Vị trí chính xác -->
+  <!-- https://tailwindcss.com/docs/grid-column -->
+  <section>
+    <h1>3. Start / End Position - Vị trí điểm đầu & cuối</h1>
+    <div class="grid grid-cols-6 gap-2 bg-slate-50 p-4 border">
+      <div class="col-start-2 col-span-4 bg-purple-500 text-white p-4 text-center">
+        Bắt đầu cột 2, gộp 4 cột (C2 -> C5)
+      </div>
+      <div class="col-start-1 col-end-3 bg-purple-300 p-4">Cột 1 đến 3</div>
+      <div class="col-end-7 col-span-2 bg-purple-600 text-white p-4">Kết thúc tại 7, gộp 2</div>
+    </div>
+  </section>
+
+  <!-- 4. Grid Auto Flow - Luồng tự động sắp xếp -->
+  <!-- https://tailwindcss.com/docs/grid-auto-flow -->
+  <section>
+    <h1>4. Grid Auto Flow - Tự động lấp đầy</h1>
+    <div class="space-y-8">
+      <div>
+        <h3 class="text-sm font-bold mb-2">grid-flow-row (Mặc định)</h3>
+        <div class="grid grid-cols-3 grid-flow-row gap-2 bg-slate-100 p-2 border">
+          <div class="bg-amber-400 p-4">1</div>
+          <div class="bg-amber-400 p-4">2</div>
+          <div class="bg-amber-500 col-span-2 p-4">3 (col-span-2)</div>
+          <div class="bg-amber-400 p-4">4</div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold mb-2">grid-flow-row-dense (Lấp đầy khoảng trống)</h3>
+        <div class="grid grid-cols-3 grid-flow-row-dense gap-2 bg-slate-100 p-2 border">
+          <div class="bg-rose-400 p-4">1</div>
+          <div class="bg-rose-400 p-4">2</div>
+          <div class="bg-rose-500 col-span-2 p-4">3 (col-span-2)</div>
+          <div class="bg-blue-500 p-4">4 (Lấp vào chỗ trống của dòng 1)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Placement (Align & Justify) - Căn chỉnh trong Grid -->
+  <!-- https://tailwindcss.com/docs/justify-items -->
+  <section>
+    <h1>5. Placement - Căn chỉnh bên trong ô lưới</h1>
+    <div class="grid grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xs font-bold mb-2">justify-items-center (Theo phương ngang)</h3>
+        <div class="grid grid-cols-3 justify-items-center bg-slate-100 border p-2 h-24">
+          <div class="w-8 h-8 bg-teal-500"></div>
+          <div class="w-8 h-8 bg-teal-500"></div>
+          <div class="w-8 h-8 bg-teal-500"></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xs font-bold mb-2">align-items-center (Theo phương dọc)</h3>
+        <div class="grid grid-cols-3 items-center bg-slate-100 border p-2 h-24">
+          <div class="w-full h-8 bg-cyan-500"></div>
+          <div class="w-full h-8 bg-cyan-500"></div>
+          <div class="w-full h-8 bg-cyan-500"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Gap - Khoảng cách ô lưới -->
+  <!-- https://tailwindcss.com/docs/gap -->
+  <section>
+    <h1>6. Gap - Khoảng cách</h1>
+    <div class="grid grid-cols-3 gap-x-10 gap-y-2 bg-slate-100 p-4 border">
+      <div class="p-4 bg-orange-400 text-white text-center">gap-x-10</div>
+      <div class="p-4 bg-orange-400 text-white text-center">gap-x-10</div>
+      <div class="p-4 bg-orange-400 text-white text-center">gap-x-10</div>
+      <div class="p-4 bg-orange-500 text-white text-center">gap-y-2</div>
+      <div class="p-4 bg-orange-500 text-white text-center">gap-y-2</div>
+      <div class="p-4 bg-orange-500 text-white text-center">gap-y-2</div>
+    </div>
+  </section>
+
+  <!-- 7. Responsive Grid - Bố cục đáp ứng -->
+  <section class="pb-20">
+    <h1>7. Responsive Grid - Lưới linh hoạt theo màn hình</h1>
+    <div class="p-6 bg-slate-50 border rounded-xl">
+      <p class="mb-4 italic text-sm">(Resize màn hình: 1 cột di động -> 2 cột Tablet -> 4 cột Desktop)</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-10 bg-white border shadow rounded text-center font-bold">Card 1</div>
+        <div class="p-10 bg-white border shadow rounded text-center font-bold">Card 2</div>
+        <div class="p-10 bg-white border shadow rounded text-center font-bold">Card 3</div>
+        <div class="p-10 bg-white border shadow rounded text-center font-bold">Card 4</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
 </html>
